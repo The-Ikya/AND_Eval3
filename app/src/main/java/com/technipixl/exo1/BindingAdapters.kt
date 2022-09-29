@@ -1,5 +1,6 @@
 package com.technipixl.exo1
 
+import android.util.Log
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +11,7 @@ import com.technipixl.exo1.recyclerViews.HeroRecyclerView
 @BindingAdapter("listData")
 fun bindHeroRecyclerView(recyclerView: RecyclerView, data: List<Heroes.Data.Hero>) {
 	val adapter = recyclerView.adapter as HeroRecyclerView
+	Log.d("DATAS", data.toString())
 	adapter.submitList(data)
 }
 
